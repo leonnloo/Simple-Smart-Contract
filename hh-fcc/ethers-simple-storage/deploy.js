@@ -21,8 +21,15 @@ async function main() {
   console.log("Deploying, please wait...")
   const contract = await contractFactory.deploy()
   // const contract = await contractFactory.deploy({ gasPrice: 100000000000 })
-  const deploymentReceipt = await contract.deploymentTransaction(1)
-  console.log(`Contract deployed to ${contract.address}`)
+  // const deploymentReceipt = await contract.deploymentTransaction(1)
+  // await contract.deploymentTransaction().wait(1)
+  const deploymentTransaction = contract.deploymentTransaction(1)
+  console.log("Deployment transaction:", deploymentTransaction.hash)
+
+  await deploymentTransaction.wait() // Wait for the transaction to be mined
+  address = await contract.getAddress()
+  console.log(`Contract deployed to ${address}`)
+  // console.log(`Contract deployed to ${contract.getAddress()}`)
   //   console.log("Here is the transaction:")
   //   console.log(contract.deployTransaction)
   //   console.log("Here is the receipt:")
@@ -57,7 +64,7 @@ async function main() {
   console.log("Updating favorite number...")
   const nonce = await provider.getTransactionCount(wallet.address, "latest") // Fetches the latest nonce
   const transactionResponse = await contract.store(23, { nonce: nonce })
-  let transactionReceipt = await transactionResponse.wait()
+  let transactionReceipt = await transactionResponse.wait(1)
   currentFavoriteNumber = await contract.retrieve()
   console.log(`New Favorite Number: ${currentFavoriteNumber}`)
 }
