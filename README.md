@@ -28,10 +28,7 @@ This project is a practical demonstration of using the Hardhat framework to deve
    ```bash
    cd <project-directory>
    ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+3. Install npm dependencies using package.json
 
 ### 📝 Compile Contracts
 
