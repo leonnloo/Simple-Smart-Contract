@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 
-This project is a practical demonstration of using the Hardhat framework to develop, compile, deploy, and test Ethereum smart contracts written in Solidity. Inspired by the [Solidity, Blockchain, and Smart Contract Course – Beginner to Expert Python Tutorial](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=34221s) by Patrick Collins from freeCodeCamp, this project leverages Hardhat to run a local blockchain simulation, enabling thorough testing and debugging of smart contracts.
+This project is a practical demonstration of using the Hardhat framework to develop, compile, deploy, and test Ethereum smart contracts written in Solidity. Inspired by the [Solidity, Blockchain, and Smart Contract Course – Beginner to Expert Python Tutorial](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=34221s) by Patrick Collins from freeCodeCamp, this project leverages Hardhat to run a local blockchain simulation and on sepolia testnet, enabling thorough testing and debugging of smart contracts.
 
 ## ✨ Features
 
